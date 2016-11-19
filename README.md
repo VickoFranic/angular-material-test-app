@@ -11,7 +11,7 @@ npm -v
 gulp -v
 ```
 
-### Installing
+## Installing
 
 Build css and js vendor files by running just `gulp` or with:
 
@@ -38,8 +38,9 @@ npm run watch-app
 
 ## Application structure
 
-Entry point for angular application is located in `app/main.js`. From there on, custom built modules are included, so feel free to structure application for your own needs.
+Entry point for angular application is located in `app/main.js`. From there on, custom built modules are included, so feel free to change it and structure application for your own needs.
 
+Also, there is custom css file `app/assets/style.css`, where you can set your own style changes. File is also included in `gulp` build, build you will have to run `gulp` or `npm run build-vendor` each time when you add css in it.
 
 ## Deployment
 
