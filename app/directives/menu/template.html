@@ -1,0 +1,27 @@
+<section layout flex="100">
+
+  <md-sidenav class="md-sidenav-left" md-component-id="menu">
+    <md-toolbar>
+      <h1 class="md-toolbar-tools">Menu</h1>
+    </md-toolbar>
+    <md-list>
+      <md-list-item>
+        <md-button flex="100" class="md-primary" ui-sref="home" ng-click="vm.toggle()"><h4>Home</h4></md-button>
+      </md-list-item>
+
+      <md-list-item>
+        <md-button flex="100" class="md-primary" ui-sref="info" ng-click="vm.toggle()"><h4>Info</h4></md-button>
+      </md-list-item>
+    </md-list>
+
+  </md-sidenav>
+
+  <md-content flex layout-padding>
+    <div layout="column" layout-align="top start">
+      <md-button class="md-fab md-primary md-hue-1" layout-padding class="md-icon-button" ng-click="vm.toggle()">
+        <ng-md-icon icon="menu" style="fill: #fff"></ng-md-icon>
+      </md-button>
+    </div>
+  </md-content>
+
+</section>
