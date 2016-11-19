@@ -13,6 +13,12 @@ gulp -v
 
 ## Installing
 
+First, install dependencies:
+
+```
+npm install
+```
+
 Build css and js vendor files by running just `gulp` or with:
 
 ```
