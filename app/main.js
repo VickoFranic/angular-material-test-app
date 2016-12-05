@@ -12,7 +12,9 @@ var app = angular.module('app',
 		require('./modules/info')
 	])
 	.directive('appMenu', require('./directives/menu'))
+
 	.service('Dialog', require('./services/dialog'))
+	.service('Facebook', require(('./services/facebook')))
 
 app.config(['$locationProvider', 
 	function($locationProvider) {

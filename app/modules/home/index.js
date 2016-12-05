@@ -11,10 +11,11 @@ angular.module(MODULE_NAME, [])
 
 config.$inject = ['$stateProvider'];
 function config($stateProvider) {
-    $stateProvider.state('home', {
-        url: '/home',
-        template: fs.readFileSync(__dirname + '/template.html'),
-        controllerAs: 'vm',
-        controller: 'HomeController'
-    });
+    $stateProvider
+    	.state('home', {
+	        url: '/home',
+	        template: fs.readFileSync(__dirname + '/template.html'),
+	        controllerAs: 'vm',
+	        controller: 'HomeController'
+	    });
 };

@@ -14,6 +14,8 @@ function config($stateProvider) {
     $stateProvider
 	    .state('info', {
 	        url: '/info',
-            template: fs.readFileSync(__dirname + '/template.html', 'utf8')
+            template: fs.readFileSync(__dirname + '/template.html', 'utf8'),
+        	controllerAs: 'vm',
+        	controller: 'InfoController'
     });
 }

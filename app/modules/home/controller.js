@@ -2,13 +2,15 @@
 
 module.exports = HomeController;
 
-HomeController.$inject = ['Dialog'];
-function HomeController(Dialog) {
+HomeController.$inject = ['$scope', '$rootScope', 'Dialog', 'Facebook'];
+function HomeController($scope, $rootScope, Dialog, Facebook) {
 	const vm = this;
 
-	vm.openDialog = openDialog;
+	vm.fb = Facebook;
+	vm.fbLogin = fbLogin;
 
-	function openDialog() {
-		Dialog.show();
+	function fbLogin() {
+		vm.fb.facebookLogin();
 	}
+
 }

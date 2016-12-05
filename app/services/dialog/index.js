@@ -2,19 +2,24 @@
 
 module.exports = Dialog;
 
-const fs = require('fs');
-const template = fs.readFileSync(__dirname + '/template.html');
-
 Dialog.$inject = ['$mdDialog'];
 function Dialog($mdDialog) {
 	const vm = this;
 
-	vm.show = show;
+	vm.showMessageToUser = showMessageToUser;
 
-	function show() {
-		$mdDialog.show({
-			template: template
-		});
+	function showMessageToUser(user) {
+      alert = $mdDialog.alert({
+        title: 'Welcome to the machine !',
+        textContent: user.name + ', this is an example of simple Facebook Login.',
+        ok: 'Close'
+      });
+
+      $mdDialog
+        .show(alert)
+        .finally(function() {
+          alert = undefined;
+        });
 	}
 
 	function hide() {
